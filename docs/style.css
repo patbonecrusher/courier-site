@@ -52,13 +52,8 @@ header.site .inner {
   color: var(--text);
 }
 .brand:hover { text-decoration: none; }
-.mark {
-  width: 28px; height: 28px;
-  border-radius: 8px;
-  background: linear-gradient(145deg, #5b8cff, #3457d5);
-  display: grid; place-items: center;
-}
-.mark svg { width: 16px; height: 16px; }
+.mark { width: 36px; height: 36px; display: block; margin: 0 -2px 0 -4px; }
+.hero-icon { display: block; margin: 0 0 6px -14px; }
 nav a { margin-left: 22px; font-size: 15px; color: var(--muted); }
 nav a[aria-current="page"] { color: var(--text); font-weight: 600; }
 main { padding-top: 56px; padding-bottom: 72px; }
