@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Courier</title>
+<meta name="description" content="How Courier handles Google user data: everything stays on your Mac.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="inner">
+  <a class="brand" href="./"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7.5 8.5 6 8.5-6"/></svg></span>Courier</a>
+  <nav><a href="./">Overview</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></nav>
+</div></header>
+<main>
+
+<h1>Privacy Policy</h1>
+<p class="meta">Effective 1 October 2026</p>
+
+<div class="card accent">
+  <p><strong>In short:</strong> Courier runs on your Mac and nowhere else. The developer operates no server and never receives your email, your Google account details, or anything derived from them.</p>
+</div>
+
+<h2>Who this covers</h2>
+<p>This policy describes how the Courier application for macOS ("Courier", "the app") handles information when you connect a Google account to it. Courier is developed and maintained by an individual developer ("the developer").</p>
+
+<h2>Information Courier accesses</h2>
+<p>With your permission, Courier uses Google's Gmail API to access the following in each Google account you connect:</p>
+<table>
+  <tr><th>Data</th><th>Why Courier needs it</th></tr>
+  <tr><td>Your email address</td><td>To identify the account in the app and to keep each account's mail separate.</td></tr>
+  <tr><td>Email messages and conversations, including senders, recipients, subjects, dates and bodies</td><td>To display your mail, and to sort and summarise it on your Mac.</td></tr>
+  <tr><td>Gmail labels and message states such as unread, starred and inbox</td><td>To show the correct state and to apply the changes you make.</td></tr>
+</table>
+<p>Courier requests the Gmail scope <code>https://www.googleapis.com/auth/gmail.modify</code>, together with <code>openid</code> and <code>email</code>. It does not request access to your contacts, calendar, files or any other Google service.</p>
+
+<h2>How Courier uses that information</h2>
+<ul>
+  <li><strong>Showing your mail.</strong> Conversations in your inbox are downloaded and displayed in the app.</li>
+  <li><strong>Sorting and summarising.</strong> An AI language model that runs locally on your Mac reads each conversation to assign it a category, an urgency rating and a short summary. This processing happens on your device. The content is not sent anywhere to be processed.</li>
+  <li><strong>Answering your questions.</strong> The built-in assistant uses the same on-device model to search and read the mail stored on your Mac when you ask it something.</li>
+  <li><strong>Carrying out your actions.</strong> When you archive, trash, star, snooze, mark as read or re-file a conversation, Courier sends that change to Gmail. The assistant can suggest such actions, but they are only carried out after you confirm them.</li>
+  <li><strong>Writing labels.</strong> Courier creates labels named <code>Courier/Priority</code>, <code>Courier/Personal</code>, <code>Courier/Notifications</code> and <code>Courier/Newsletters</code> in your Gmail account and applies them to conversations it has sorted. You can turn this off in the app's settings.</li>
+  <li><strong>Remembering your corrections.</strong> If you move a conversation to a different category, Courier stores the sender, subject and your choice locally so that it can sort similar mail the same way.</li>
+</ul>
+
+<h2>Where your information is stored</h2>
+<ul>
+  <li><strong>Mail and derived data</strong> (categories, summaries, corrections) are kept in a database inside the app's sandboxed container on your Mac.</li>
+  <li><strong>Sign-in tokens</strong> issued by Google are kept in the macOS Keychain.</li>
+  <li><strong>Nothing is stored by the developer.</strong> There is no Courier account, no Courier server and no cloud backup operated by the developer.</li>
+</ul>
+
+<h2>Sharing and disclosure</h2>
+<p>Courier does not share your information with anyone. Specifically:</p>
+<ul>
+  <li>Your Google user data is not sent to the developer or to any third party.</li>
+  <li>It is not sold, rented or used for advertising.</li>
+  <li>It is not used to train, improve or develop generalised artificial intelligence or machine learning models. The on-device model is used as-is and is not trained on your mail.</li>
+  <li>No person other than you reads your mail through Courier.</li>
+</ul>
+<p>The only network connections Courier makes are to Google's servers, to read and update your mail and to sign you in, and to Hugging Face, to download the AI model's files and check for updates to them. Those requests contain no information about you or your mail.</p>
+
+<h2>Google API Services User Data Policy</h2>
+<p>Courier's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>Retention and deletion</h2>
+<ul>
+  <li><strong>Remove an account.</strong> Removing an account in Courier deletes that account's mail, summaries and sign-in tokens from your Mac.</li>
+  <li><strong>Forget corrections.</strong> The record of conversations you re-filed by hand is kept, across accounts, until you choose Forget Learned Preferences in the app's settings.</li>
+  <li><strong>Revoke access.</strong> You can withdraw Courier's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Courier can then no longer read or change that account.</li>
+  <li><strong>Delete everything.</strong> Deleting the app and its container folder removes all locally stored data.</li>
+  <li><strong>Labels.</strong> Labels that Courier created in Gmail remain in your Google account until you delete them in Gmail.</li>
+</ul>
+<p>Courier keeps local copies only of conversations currently in your inbox or snoozed. When a conversation leaves your inbox, its local copy is removed at the next sync.</p>
+
+<h2>Security</h2>
+<p>Courier runs inside the macOS App Sandbox. Sign-in uses Google's OAuth 2.0 flow with PKCE in the system browser sheet, so Courier never sees your Google password. All communication with Google uses TLS.</p>
+
+<h2>Children</h2>
+<p>Courier is not directed at children and is not intended for use by anyone under 13.</p>
+
+<h2>Changes to this policy</h2>
+<p>If Courier's handling of data changes, for example if an optional feature that uses a cloud service is added, this policy will be updated before that feature is available, the effective date above will change, and any such feature will be off unless you turn it on.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy can be sent to the developer through <a href="https://github.com/patbonecrusher">github.com/patbonecrusher</a>.</p>
+
+</main>
+<footer class="site"><div class="inner">
+  <a href="./">Overview</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a>
+  <p>Courier is an independent personal project. Gmail and Google are trademarks of Google LLC. Courier is not affiliated with or endorsed by Google.</p>
+</div></footer>
+</body>
+</html>
