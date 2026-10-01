@@ -17,7 +17,7 @@
       <stop offset="0" stop-color="#5B6CFF"/>
       <stop offset="1" stop-color="#7A4DF0"/>
     </linearGradient>
-    <linearGradient id="spark" x1="690" y1="200" x2="830" y2="400" gradientUnits="userSpaceOnUse">
+    <linearGradient id="spark" x1="666" y1="204" x2="806" y2="404" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#FFF0A8"/>
       <stop offset="0.55" stop-color="#FFC93C"/>
       <stop offset="1" stop-color="#FF9A1F"/>
@@ -49,11 +49,13 @@
     <path d="M196 322 L512 560 L828 322" stroke="url(#flap)" stroke-width="46"/>
   </g>
 
-  <!-- sparkle: a backing star in the field colour cuts it out of the envelope -->
+  <!-- sparkle: a backing star in the field colour cuts it out of the envelope.
+       Both sparkles stay at least 48 units inside the body edge: macOS 26+ re-masks
+       icons to its own rounder shape and clips anything closer to the edge. -->
   <g clip-path="url(#env)">
-    <path d="M748 168 Q774 282 888 308 Q774 334 748 448 Q722 334 608 308 Q722 282 748 168 Z" fill="url(#bg)" stroke="url(#bg)" stroke-width="44" stroke-linejoin="round"/>
+    <path d="M724 180 Q748 288 856 312 Q748 336 724 444 Q700 336 592 312 Q700 288 724 180 Z" fill="url(#bg)" stroke="url(#bg)" stroke-width="44" stroke-linejoin="round"/>
   </g>
-  <path d="M748 168 Q774 282 888 308 Q774 334 748 448 Q722 334 608 308 Q722 282 748 168 Z" fill="url(#spark)"/>
+  <path d="M724 180 Q748 288 856 312 Q748 336 724 444 Q700 336 592 312 Q700 288 724 180 Z" fill="url(#spark)"/>
   <!-- small companion sparkle -->
-  <path d="M852 426 Q861 466 901 475 Q861 484 852 524 Q843 484 803 475 Q843 466 852 426 Z" fill="#FFE27A"/>
+  <path d="M834 434 Q842 468 876 476 Q842 484 834 518 Q826 484 792 476 Q826 468 834 434 Z" fill="#FFE27A"/>
 </svg>
